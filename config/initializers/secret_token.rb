@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Health::Application.config.secret_key_base = '0fddb191d6719641432d663017f112536db7bd68c6d5b5ca09da66ee997ad61699e2ebd1fd8b9099c1f6daa41c0dbf5a8de7539ca6fae655b504d9f7310fba71'
+Akabusi::Application.config.secret_key_base = '0fddb191d6719641432d663017f112536db7bd68c6d5b5ca09da66ee997ad61699e2ebd1fd8b9099c1f6daa41c0dbf5a8de7539ca6fae655b504d9f7310fba71'
