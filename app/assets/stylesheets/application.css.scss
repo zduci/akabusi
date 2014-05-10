@@ -1,0 +1,121 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+$line-color: #fff;
+
+html, body {
+  height: 100%;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  color: $line-color;
+}
+
+@media all and (min-width: 699px)  {
+  body {
+    font-size: 16px;
+  }
+}
+
+
+body {
+  background-color: #aa3829;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 900px;
+}
+
+.lanes {
+  height: 100%;
+  border-left: .625em solid $line-color;
+  border-right: .625em solid $line-color;
+   * {
+    box-sizing: border-box; 
+   }
+}
+
+.lane {
+  display: inline-block;
+  position: relative;
+  width: 14.285714286%;
+  height: 100%;
+  border-left: .3125em solid $line-color;
+  border-right: .3125em solid $line-color;
+
+  b {
+    width: 90%;
+    height: .5em;
+    background-color: $line-color;
+
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+
+    & + b {
+      bottom: 20%;
+      height: .35em;
+
+      & + b {
+        bottom: 30%;
+        height: .25em;
+
+        & + b {
+          bottom: 40%;
+          height: .15em;
+        }
+      }
+    }
+  }
+}
+
+.lane__number {
+  font-size: 2em;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 2.5%;
+  width: 100%;
+}
+
+.lane__distance {
+  opacity: 0.4;
+  text-align: right;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.lane__user {
+  position: absolute;
+  left: 0;
+  top: 15%;
+  height: 80%;
+  width: 100%;
+
+  img {
+    position: absolute;
+    left: 0;
+    bottom: 0%;
+    max-width: 100%;
+
+     -webkit-transition-property: top, bottom;
+     -webkit-transition-duration: 5s;
+  }
+}

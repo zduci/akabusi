@@ -11,6 +11,10 @@ gem 'jbuilder', '~> 1.2'
 gem 'haml-rails'
 gem 'unicorn'
 gem 'unicorn-rails'
+
+gem 'react-rails', '~> 0.8.0.0'
+gem 'rename'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_20]

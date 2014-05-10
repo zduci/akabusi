@@ -1,0 +1,15 @@
+-# .lanes><
+-#   - @users.each_with_index do |name,n|
+-#     .lane><
+-#       %b
+-#       %b
+-#       %b
+-#       %b
+-#       .lane__number= n+1
+-#       .lane__distance #{number_with_precision( (12.3*(n+4*1)), :precision => 2)}km
+-#       %span.lane__user
+-#         = image_tag "face/#{name}.png", class: "lane__user__image"
+#app
+:javascript
+  window.users_url = "#{users_path(format: :json)}";
+  React.renderComponent(App.Race({endpoint: users_url, polling_interval: (1000*60*10)}), $('body')[0]);
